@@ -185,6 +185,7 @@ class PourbaixDiagram(object):
                     raise Exception("Unknown Error message!")
             if not(np.all(weights > 0.0)):
                 continue
+            # Fix weights errors
             weights = list(weights)
             weights.insert(0, 1.0)
             super_entry = MultiEntry(multi_entries, weights)
